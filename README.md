@@ -72,3 +72,27 @@ This project demonstrates time-series forecasting, feature engineering, machine 
 - Add LSTM/GRU neural forecasting model.
 - Forecast each slice separately.
 - Connect the forecast output to the `qoe-greenslicer-rl` resource controller.
+
+## Results preview
+
+This experiment forecasts synthetic 5G traffic using time-series lag features, rolling statistics and a Random Forest regression model.
+
+### Forecasting metrics
+
+| Metric | Value |
+|---|---:|
+| MAE | 41.42 |
+| RMSE | 57.57 |
+| R² | 0.692 |
+| Baseline MAE | 55.67 |
+
+The model reduces MAE by approximately **25.6%** compared with the naive baseline.
+
+### Actual vs predicted traffic
+
+![Actual vs predicted traffic](docs/assets/forecast_actual_vs_predicted.png)
+
+### Feature importance
+
+![Feature importance](docs/assets/feature_importance.png)
+
